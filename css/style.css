@@ -1,0 +1,389 @@
+*, *:after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+BODY {
+  height: 100%;
+  font-family: "Varela Round", sans-serif;
+  background: #282931;
+  -webkit-font-smoothing: antialiased;
+  z-index: 10;
+}
+
+canvas {
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  z-index: -50;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: #fc3565;
+}
+
+h2 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #ffffff;
+  opacity: 0.55;
+}
+
+.container {
+  width: 80%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+
+
+/* !index.html! */
+
+.logo {
+  font-family: "Monoton", cursive;
+  font-size: 8rem;
+  color: #fff;
+}
+
+nav {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 7rem;
+  text-align: center;
+}
+
+nav a {
+  position: relative;
+  display: inline-block;
+  margin: 15px 25px;
+  outline: none;
+  color: #555560;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+  font-size: 1.35rem;
+  vertical-align: top;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #fff;
+  outline: none;
+}
+
+/* Эффекты навигации */
+
+.navigation a {
+  padding: 0 20px;
+  height: 45px;
+  line-height: 45px;
+}
+
+.navigation a::before,
+.navigation a::after {
+  position: absolute;
+  width: 45px;
+  height: 2px;
+  background: #fff;
+  content: '';
+  opacity: 0.2;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+.navigation a::before {
+  top: 0;
+  left: 0;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.navigation a::after {
+  right: 0;
+  bottom: 0;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transform-origin: 100% 0;
+  -moz-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+}
+
+.navigation a:hover::before,
+.navigation a:hover::after,
+.navigation a:focus::before,
+.navigation a:focus::after {
+  opacity: 1;
+}
+
+.navigation a:hover::before,
+.navigation a:focus::before {
+  left: 50%;
+  -webkit-transform: rotate(0deg) translateX(-50%);
+  -moz-transform: rotate(0deg) translateX(-50%);
+  transform: rotate(0deg) translateX(-50%);
+}
+
+.navigation a:hover::after,
+.navigation a:focus::after {
+  right: 50%;
+  -webkit-transform: rotate(0deg) translateX(50%);
+  -moz-transform: rotate(0deg) translateX(50%);
+  transform: rotate(0deg) translateX(50%);
+}
+
+/* Футер */
+
+.footer {
+  padding-top: 3.5rem;
+}
+
+.footer p {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.55;
+}
+
+
+
+/* !contacts.html! */
+
+.content {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.contacts nav,
+.works nav,
+.skills nav {
+  margin-bottom: 0.5rem;
+}
+
+.contacts .navigation a,
+.works .navigation a,
+.skills .navigation a {
+  padding: 0 5px;
+}
+
+.contacts .footer,
+.works .footer,
+.skills .footer {
+  padding: 0;
+}
+
+/* Сoциальные иконки (Evil Icons 1.8.0) */
+
+.content .icon {
+  fill: #555560;
+}
+
+.icon--ei-sc-vk:hover {
+  fill: #45668e;
+}
+
+.icon--ei-sc-facebook:hover {
+  fill: #3b5998;
+}
+
+.icon--ei-sc-twitter:hover {
+  fill: #55acee;
+}
+
+.icon--ei-sc-github:hover {
+  fill: #000;
+}
+
+.icon--ei-sc-skype:hover {
+  fill: #00aff0;
+}
+
+.icon--ei-sc-telegram:hover {
+  fill: #08c;
+}
+
+
+
+/* skills.html! */
+
+.skills .content {
+  margin-bottom: 0;
+}
+
+.content p {
+  margin: 0px;
+  padding: 0px;
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: #555560;
+}
+
+/* Круги с эффектами */
+.ch-grid {
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+  text-align: center;
+}
+
+.ch-grid:after,
+.ch-item:before {
+  content: '';
+  display: table;
+}
+
+.ch-grid:after {
+  clear: both;
+}
+
+.ch-grid li {
+  width: 140px;
+  height: 140px;
+  display: inline-block;
+  margin: 20px;
+}
+
+.ch-item {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  cursor: default;
+  perspective: 900px;
+}
+
+.ch-info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.ch-info-front {
+  opacity: 0.5;
+}
+
+.ch-info > div {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-position: center center;
+  transition: all 0.4s linear;
+  transform-origin: 50% 0%;
+}
+
+.ch-info .ch-info-front {
+  box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.9);
+}
+
+.ch-info .ch-info-back {
+  transform: translate3d(0, 0, -220px) rotate3d(1, 0, 0, 90deg);
+  background: #555560;
+  opacity: 0;
+}
+
+/* Картинки в кружочках */
+.ch-img-1 {
+  background-image: url(../img/html.jpg);
+}
+
+.ch-img-2 {
+  background-image: url(../img/css3.jpg);
+}
+
+.ch-img-3 {
+  background-image: url(../img/bem.jpg);
+}
+
+.ch-img-4 {
+  background-image: url(../img/ps.jpg);
+}
+
+.ch-img-5 {
+  background-image: url(../img/jquery.jpg);
+}
+
+.ch-img-6 {
+  background-image: url(../img/js.jpg);
+}
+
+.ch-img-7 {
+  background-image: url(../img/sass.jpg);
+}
+
+.ch-img-8 {
+  background-image: url(../img/grunt.jpg);
+}
+
+.ch-img-9 {
+  background-image: url(../img/boots.jpg);
+}
+
+.ch-img-10 {
+  background-image: url(../img/svg.jpg);
+}
+
+.ch-img-11 {
+  background-image: url(../img/git.jpg);
+}
+
+.ch-img-12 {
+  background-image: url(../img/wp.jpg);
+}
+
+.ch-info h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1, 5rem;
+  margin: 0 5px;
+  padding-top: 20px;
+  height: 60px;
+  font-family: "Varela Round", Arial, sans-serif;
+}
+
+.ch-info p {
+  color: #fff;
+  padding: 10px 5px;
+  font-style: italic;
+  margin: 0 10px;
+  font-size: 1rem;
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.ch-item:hover .ch-info-front {
+  transform: translate3d(0, 280px, 0) rotate3d(1, 0, 0, -90deg);
+  opacity: 0;
+}
+
+.ch-item:hover .ch-info-back {
+  transform: rotate3d(1, 0, 0, 0deg);
+  opacity: 1;
+}
