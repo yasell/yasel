@@ -1,3 +1,4 @@
+/* Базовые стили */
 *, *:after, *::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -52,7 +53,6 @@ h2 {
 
 
 /* !index.html! */
-
 .logo {
   font-family: "Monoton", cursive;
   font-size: 8rem;
@@ -82,13 +82,13 @@ nav a {
 }
 
 nav a:hover,
+nav a:active,
 nav a:focus {
   color: #fff;
   outline: none;
 }
 
 /* Эффекты навигации */
-
 .navigation a {
   padding: 0 20px;
   height: 45px;
@@ -133,12 +133,15 @@ nav a:focus {
 
 .navigation a:hover::before,
 .navigation a:hover::after,
+.navigation a:active::before,
+.navigation a:active::after,
 .navigation a:focus::before,
 .navigation a:focus::after {
   opacity: 1;
 }
 
 .navigation a:hover::before,
+.navigation a:active::before,
 .navigation a:focus::before {
   left: 50%;
   -webkit-transform: rotate(0deg) translateX(-50%);
@@ -147,6 +150,7 @@ nav a:focus {
 }
 
 .navigation a:hover::after,
+.navigation a:active::after,
 .navigation a:focus::after {
   right: 50%;
   -webkit-transform: rotate(0deg) translateX(50%);
@@ -155,7 +159,6 @@ nav a:focus {
 }
 
 /* Футер */
-
 .footer {
   padding-top: 3.5rem;
 }
@@ -170,7 +173,6 @@ nav a:focus {
 
 
 /* !contacts.html! */
-
 .content {
   width: 80%;
   margin: 0 auto;
@@ -197,7 +199,6 @@ nav a:focus {
 }
 
 /* Сoциальные иконки (Evil Icons 1.8.0) */
-
 .content .icon {
   fill: #555560;
 }
@@ -229,7 +230,6 @@ nav a:focus {
 
 
 /* skills.html! */
-
 .skills .content {
   margin-bottom: 0;
 }
@@ -252,13 +252,13 @@ nav a:focus {
   text-align: center;
 }
 
-.ch-grid:after,
-.ch-item:before {
+.ch-grid::after,
+.ch-item::before {
   content: '';
   display: table;
 }
 
-.ch-grid:after {
+.ch-grid::after {
   clear: both;
 }
 
@@ -378,12 +378,16 @@ nav a:focus {
   border-top: 2px solid rgba(255, 255, 255, 0.5);
 }
 
-.ch-item:hover .ch-info-front {
+.ch-item:hover .ch-info-front,
+.ch-item:active .ch-info-front,
+.ch-item:focus .ch-info-front {
   transform: translate3d(0, 280px, 0) rotate3d(1, 0, 0, -90deg);
   opacity: 0;
 }
 
-.ch-item:hover .ch-info-back {
+.ch-item:hover .ch-info-back,
+.ch-item:active .ch-info-back,
+.ch-item:focus .ch-info-back {
   transform: rotate3d(1, 0, 0, 0deg);
   opacity: 1;
 }
