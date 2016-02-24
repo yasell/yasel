@@ -1,5 +1,5 @@
 /* Базовые стили */
-*, *:after, *::before {
+*, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -43,6 +43,16 @@ h2 {
   margin: 0 auto;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 .header {
   width: 70%;
   margin: 0 auto;
@@ -66,7 +76,7 @@ nav {
   text-align: center;
 }
 
-nav a {
+.navigation .btn {
   position: relative;
   display: inline-block;
   margin: 15px 25px;
@@ -79,24 +89,25 @@ nav a {
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
   font-size: 1.35rem;
   vertical-align: top;
+  cursor: pointer;
 }
 
-nav a:hover,
-nav a:active,
-nav a:focus {
+.navigation .btn:hover,
+.navigation .btn:active,
+.navigation .btn:focus {
   color: #fff;
   outline: none;
 }
 
 /* Эффекты навигации */
-.navigation a {
+.navigation .btn {
   padding: 0 20px;
   height: 45px;
   line-height: 45px;
 }
 
-.navigation a::before,
-.navigation a::after {
+.navigation .btn:before,
+.navigation .btn:after {
   position: absolute;
   width: 45px;
   height: 2px;
@@ -109,7 +120,7 @@ nav a:focus {
   pointer-events: none;
 }
 
-.navigation a::before {
+.navigation .btn:before {
   top: 0;
   left: 0;
   -webkit-transform: rotate(90deg);
@@ -120,7 +131,7 @@ nav a:focus {
   transform-origin: 0 0;
 }
 
-.navigation a::after {
+.navigation .btn:after {
   right: 0;
   bottom: 0;
   -webkit-transform: rotate(90deg);
@@ -131,27 +142,27 @@ nav a:focus {
   transform-origin: 100% 0;
 }
 
-.navigation a:hover::before,
-.navigation a:hover::after,
-.navigation a:active::before,
-.navigation a:active::after,
-.navigation a:focus::before,
-.navigation a:focus::after {
+.navigation .btn:hover:before,
+.navigation .btn:hover:after,
+.navigation .btn:active:before,
+.navigation .btn:active:after,
+.navigation .btn:focus:before,
+.navigation .btn:focus:after {
   opacity: 1;
 }
 
-.navigation a:hover::before,
-.navigation a:active::before,
-.navigation a:focus::before {
+.navigation .btn:hover:before,
+.navigation .btn:active:before,
+.navigation .btn:focus:before {
   left: 50%;
   -webkit-transform: rotate(0deg) translateX(-50%);
   -moz-transform: rotate(0deg) translateX(-50%);
   transform: rotate(0deg) translateX(-50%);
 }
 
-.navigation a:hover::after,
-.navigation a:active::after,
-.navigation a:focus::after {
+.navigation .btn:hover:after,
+.navigation .btn:active:after,
+.navigation .btn:focus:after {
   right: 50%;
   -webkit-transform: rotate(0deg) translateX(50%);
   -moz-transform: rotate(0deg) translateX(50%);
@@ -252,13 +263,13 @@ nav a:focus {
   text-align: center;
 }
 
-.ch-grid::after,
-.ch-item::before {
+.ch-grid:after,
+.ch-item:before {
   content: '';
   display: table;
 }
 
-.ch-grid::after {
+.ch-grid:after {
   clear: both;
 }
 
@@ -274,7 +285,7 @@ nav a:focus {
   height: 100%;
   border-radius: 50%;
   position: relative;
-  cursor: default;
+  cursor: pointer;
   perspective: 900px;
 }
 
