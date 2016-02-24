@@ -93,8 +93,7 @@ nav {
 }
 
 .navigation .btn:hover,
-.navigation .btn:active,
-.navigation .btn:focus {
+.navigation .btn:active {
   color: #fff;
   outline: none;
 }
@@ -145,15 +144,12 @@ nav {
 .navigation .btn:hover:before,
 .navigation .btn:hover:after,
 .navigation .btn:active:before,
-.navigation .btn:active:after,
-.navigation .btn:focus:before,
-.navigation .btn:focus:after {
+.navigation .btn:active:after {
   opacity: 1;
 }
 
 .navigation .btn:hover:before,
-.navigation .btn:active:before,
-.navigation .btn:focus:before {
+.navigation .btn:active:before {
   left: 50%;
   -webkit-transform: rotate(0deg) translateX(-50%);
   -moz-transform: rotate(0deg) translateX(-50%);
@@ -161,8 +157,7 @@ nav {
 }
 
 .navigation .btn:hover:after,
-.navigation .btn:active:after,
-.navigation .btn:focus:after {
+.navigation .btn:active:after {
   right: 50%;
   -webkit-transform: rotate(0deg) translateX(50%);
   -moz-transform: rotate(0deg) translateX(50%);
