@@ -4,43 +4,174 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Works | Yasel Raman</title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Varela+Round' type='text/css'>
+  <title> Works | Yasel Raman </title>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Monoton' type='text/css'>
-  <link rel="stylesheet" href="css/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/evil-icons/1.8.0/evil-icons.min.css">
+  <link rel="stylesheet" href="css/swiper.css">
+  <link rel="stylesheet" href="css/animsition.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="img/favicon.png" type="image/png">
 </head>
 
-<body class="works">
+<body>
 
   <div id="particles-js">
-    <div class="container">
+    <div class="container  animsition">
 
       <div class="header">
-        <div class="logo"> Y </div>
-        <div class="cd-intro-content mask">
+        <a class="header__logo  animsition-link" href="index.html"> Y </a>
+        <div class="header__content">
+          <h2 class="header__description"> Портфолио </h2>
         </div>
       </div>
 
-      <div class="content">
+      <div class="works  swiper-container">
+        <ul class="works__list  swiper-wrapper">
 
+          <li class="works__item  swiper-slide">
+            <a class="works__img-wrapper" href="#">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/works/nerds-desktop.jpg, img/works/nerds-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/works/nerds-tablet.jpg, img/works/nerds-tablet@2x.jpg 2x">
+                <img class="works__img" src="img/works/nerds-mobile.jpg" srcset="img/works/nerds-mobile@2x.jpg 2x" alt="Nerds">
+              </picture>
+            </a>
+            <dl class="works__description">
+              <dt class="works__name"> Nerds </dt>
+              <dd class="works__message"> Учебный макет HTMLAcademy. Desktop only. </dd>
+            </dl>
+            <div class="works__link-list">
+              <a class="works__link" href="#"> Веб сайт </a>
+              <a class="works__link" href="#"> Код </a>
+            </div>
+          </li>
+
+          <li class="works__item  swiper-slide">
+            <a class="works__img-wrapper" href="#">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/works/aqualux-desktop.jpg, img/works/aqualux-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/works/aqualux-tablet.jpg, img/works/aqualux-tablet@2x.jpg 2x">
+                <img class="works__img" src="img/works/aqualux-mobile.jpg" srcset="img/works/aqualux-mobile@2x.jpg 2x" alt="Aqualux">
+              </picture>
+            </a>
+            <dl class="works__description">
+              <dt class="works__name"> Сауна "Aqualux" </dt>
+              <dd class="works__message"> Сверстанный сайт сауны. Desktop only. </dd>
+            </dl>
+            <div class="works__link-list">
+              <a class="works__link" href="#"> Веб сайт </a>
+              <a class="works__link" href="#"> Код </a>
+            </div>
+          </li>
+
+          <li class="works__item  swiper-slide">
+            <a class="works__img-wrapper" href="#">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/works/enel-desktop.jpg, img/works/enel-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/works/enel-tablet.jpg, img/works/enel-tablet@2x.jpg 2x">
+                <img class="works__img" src="img/works/enel-mobile.jpg" srcset="img/works/enel-mobile@2x.jpg 2x" alt="En-El">
+              </picture>
+            </a>
+            <dl class="works__description">
+              <dt class="works__name"> Электромонтаж </dt>
+              <dd class="works__message"> Анимированный адаптивный Landing Page. </dd>
+            </dl>
+            <div class="works__link-list">
+              <a class="works__link" href="#"> Веб сайт </a>
+              <a class="works__link" href="#"> Код </a>
+            </div>
+          </li>
+
+          <li class="works__item  swiper-slide">
+            <a class="works__img-wrapper" href="#">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/works/holod-desktop.jpg, img/works/holod-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/works/holod-tablet.jpg, img/works/holod-tablet@2x.jpg 2x">
+                <img class="works__img" src="img/works/holod-mobile.jpg" srcset="img/works/holod-mobile@2x.jpg 2x" alt="dobrohlad">
+              </picture>
+            </a>
+            <dl class="works__description">
+              <dt class="works__name"> Доброхлад </dt>
+              <dd class="works__message"> Сверстанный сайт компании. Desktop only. </dd>
+            </dl>
+            <div class="works__link-list">
+              <a class="works__link" href="#"> Веб сайт </a>
+              <a class="works__link" href="#"> Код </a>
+            </div>
+          </li>
+
+          <li class="works__item  swiper-slide">
+            <a class="works__img-wrapper" href="#">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/works/pink-desktop.jpg, img/works/pink-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/works/pink-tablet.jpg, img/works/pink-tablet@2x.jpg 2x">
+                <img class="works__img" src="img/works/pink-mobile.jpg" srcset="img/works/pink-mobile@2x.jpg 2x" alt="Pink">
+              </picture>
+            </a>
+            <dl class="works__description">
+              <dt class="works__name"> Pink </dt>
+              <dd class="works__message"> Учебный макет HTMLAcademy. Adaptive, retina. </dd>
+            </dl>
+            <div class="works__link-list">
+              <a class="works__link" href="#"> Веб сайт </a>
+              <a class="works__link" href="#"> Код </a>
+            </div>
+          </li>
+
+        </ul>
+        <!-- Add Pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
       </div>
 
-      <nav class="navigation">
-        <a class="btn" href="index.html"><div data-icon="ei-chevron-left" data-size="m"></div></a>
+      <nav class="navigation  navigation--back">
+        <a class="navigation__btn  animsition-link" href="index.html">
+          <div data-icon="ei-chevron-left" data-size="m"></div>
+        </a>
       </nav>
 
-      <div class="footer">
-        <p>yasel.by &#169; 2016</p>
-      </div>
     </div>
   </div>
 
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
   <script src="https://cdn.jsdelivr.net/evil-icons/1.8.0/evil-icons.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+  <script src="js/animsition.min.js"></script>
   <script src="js/index.js"></script>
+  <script>
+    $(document).ready(function() {
+      var swiper = new Swiper(".swiper-container", {
+        pagination: ".swiper-pagination",
+        slidesPerView: 2,
+        // paginationClickable: true,
+        keyboardControl: true,
+        mousewheelControl: true,
+        spaceBetween: 30,
+        grabCursor: true,
+        freeMode: true,
+        autoplay: 4000,
+        autoplayDisableOnInteraction: true,
+        spaceBetween: 15
+      });
+      $(".animsition").animsition({
+        inClass: "zoom-in",
+        outClass: "zoom-out",
+        inDuration: 1500,
+        outDuration: 900,
+        linkElement: ".animsition-link",
+        loading: false,
+        timeout: false,
+        timeoutCountdown: 5000,
+        onLoadEvent: true,
+        browser: ["animation-duration", "-webkit-animation-duration"],
+        transition: function(url) {
+          window.location.href = url;
+        }
+      });
+    });
+
+  </script>
 
 </body>
 </html>

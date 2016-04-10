@@ -4,35 +4,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Yasel Raman | Web-developer </title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Varela+Round' type='text/css'>
+  <title> Web-development | Yasel Raman </title>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Monoton' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/animsition.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="img/favicon.png" type="image/png">
-  <script src="js/modernizr.custom.js"></script>
 </head>
 
 <body>
 
   <div id="particles-js">
-    <div class="container">
+    <div class="container  animsition">
 
       <div class="header">
-        <div class="logo"> Y </div>
-        <div class="cd-intro-content mask">
-          <h1> Yasel Raman </h1>
-          <h2 class="tlt"> Web-разработка | Вёрстка сайтов </h2>
+        <div class="header__logo"> Y </div>
+        <div class="header__content">
+          <h1 class="header__name"> Yasel Raman </h1>
+          <h2 class="header__description"> Web-разработка | Вёрстка сайтов </h2>
         </div>
       </div>
 
       <nav class="navigation">
-        <a class="btn" href="skills.html">Skills</a>
-        <a class="btn" href="works.html">Works</a>
-        <a class="btn" href="contacts.html">Contacts</a>
+        <a class="navigation__btn  animsition-link" href="skills.html"> Skills </a>
+        <a class="navigation__btn  animsition-link" href="works.html"> Works </a>
+        <a class="navigation__btn  animsition-link" href="contacts.html"> Contacts </a>
       </nav>
 
       <div class="footer">
-        <p>yasel.by &#169; 2016</p>
+        <p class="footer__content"> yasel.by &#169; 2016 </p>
       </div>
 
     </div>
@@ -40,7 +40,27 @@
 
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
+  <script src="js/animsition.min.js"></script>
   <script src="js/index.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".animsition").animsition({
+        inClass: "zoom-in",
+        outClass: "zoom-out",
+        inDuration: 1500,
+        outDuration: 900,
+        linkElement: ".animsition-link",
+        loading: false,
+        timeout: false,
+        timeoutCountdown: 5000,
+        onLoadEvent: true,
+        browser: ["animation-duration", "-webkit-animation-duration"],
+        transition: function(url) {
+          window.location.href = url;
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>

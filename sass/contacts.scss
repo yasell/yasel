@@ -1,0 +1,39 @@
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Social Icons (Evil Icons 1.8.0) */
+.contacts .icon {
+  fill: #555560;
+}
+
+.icon--ei-sc-vk:hover {
+  fill: #45668e;
+}
+
+.icon--ei-sc-facebook:hover {
+  fill: #3b5998;
+}
+
+.icon--ei-sc-twitter:hover {
+  fill: #55acee;
+}
+
+.icon--ei-envelope:hover {
+  fill: $pink;
+}
+
+.icon--ei-sc-github:hover {
+  fill: #000;
+}
+
+.icon--ei-sc-skype:hover {
+  fill: #00aff0;
+}
+
+.icon--ei-sc-telegram:hover {
+  fill: #08c;
+}

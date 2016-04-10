@@ -1,0 +1,36 @@
+.header {
+  text-align: center;
+}
+
+.header__logo {
+  font: 6rem "Monoton", "Arial", cursive;
+  color: #ffffff;
+  text-shadow: 10px -6px 2px $gray;
+  @media (min-width: $tablet) {
+    font-size: 8rem;
+  }
+}
+
+.header__name {
+  font-size: 1.8rem;
+  color: $pink;
+  // font-weight: bold;
+  @media (min-width: $tablet) {
+    font-size: 2.2rem;
+  }
+  @media (min-width: $desktop) {
+    font-size: 2.5rem;
+  }
+}
+
+.header__description {
+  padding: 10px 0;
+  font-size: 1.5rem;
+  color: $white;
+  @media (min-width: $tablet) {
+    font-size: 1.8rem;
+  }
+  @media (min-width: $desktop) {
+    font-size: 2rem;
+  }
+}
