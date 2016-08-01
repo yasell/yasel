@@ -16,10 +16,10 @@
 
 .works__item {
   position: relative;
-  margin: 0 10px 10px 10px !important;
-  background-color: $gray;
+  margin: 0 5px 10px 10px !important;
+  background-color: rgba(85, 85, 96, .5);
   box-shadow: -4px -2px 10px rgba(255, 255, 255, .5);
-  opacity: .8;
+  opacity: .7;
   @media (min-width: $tablet) {
     display: flex;
     flex-direction: column;
@@ -35,10 +35,7 @@
   height: 180px;
   overflow: hidden;
   background-color: $gray;
-  opacity: .4;
-  @media (min-width: $tablet) {
-    // height: 200px;
-  }
+  opacity: .8;
   @media (min-width: $desktop) {
     height: 220px;
   }
@@ -59,7 +56,7 @@
 .works__description {
   padding: 20px 0 50px 10px;
   font: normal 0.8rem "Roboto", "Arial", sans-serif;
-  color: $white;
+  color: #ffffff;
   @media (min-width: $tablet) {
     padding: 20px 0 20px 10px;
   }
@@ -72,7 +69,6 @@
 .works__name {
   font-weight: bold;
   text-transform: uppercase;
-  color: #ffffff;
 }
 
 .works__message {
