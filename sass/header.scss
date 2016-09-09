@@ -6,9 +6,9 @@
   font: 6rem "Monoton", "Arial", cursive;
   color: #ffffff;
   text-shadow: 10px -6px 2px $gray;
-  @media (min-width: $tablet) {
-    font-size: 9rem;
-  }
+  // @media (min-width: $tablet) {
+  //   font-size: 9rem;
+  // }
 }
 
 .header__name {

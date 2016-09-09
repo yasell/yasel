@@ -1,7 +1,11 @@
 /* Swiper 3.3.1 */
 .swiper-container {
-  margin: 0 auto;
   position: relative;
+	width: 100%;
+	max-width: 960px;
+	height: 400px;
+	margin: 0 auto;
+	padding: 10px 0;
   overflow: hidden;
   /* Fix of Webkit flickering */
   z-index: 1;
