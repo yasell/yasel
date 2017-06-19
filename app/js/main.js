@@ -3,6 +3,9 @@ $(document).ready(function($) {
 	pageWidget(['index', 'news', 'contact']);
 	getAllClasses('html', '.elements_list');
 
+	// $("#preloader_inner").fadeOut();
+  $("#preloader").delay(3000).fadeOut("slow");
+
 	// - mobile menu
 	$body = $("body");
 	$menuTrigger = $("#menu__trigger");
