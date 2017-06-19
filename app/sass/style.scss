@@ -1,0 +1,15 @@
+// base
+@import "helpers/_variables";
+@import "helpers/_mixins";
+@import "reset";
+@import "base";
+
+// blocks
+// @import "helpers/_sprite";
+@import "blocks/header";
+@import "blocks/menu";
+@import "blocks/button";
+@import "blocks/form";
+@import "blocks/footer";
+@import "blocks/modal";
+@import "blocks/main";
