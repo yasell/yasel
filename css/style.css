@@ -356,11 +356,11 @@ th {
 *, *:after, *:before {
   box-sizing: border-box; }
 
-BODY {
+body {
   z-index: 10;
   height: 100%;
   font-family: "Roboto", "Arial", sans-serif;
-  background: #282931;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased; }
 
 canvas {
@@ -400,6 +400,96 @@ a {
   max-width: 1200px;
   min-height: 100vh;
   margin: 0 auto; }
+
+h1 {
+  font-size: calc(14vw + 2px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-weight: 900;
+  white-space: nowrap;
+  display: inline-block;
+  margin: 0; }
+
+.frame {
+  position: relative;
+  max-width: 100%;
+  min-height: inherit;
+  height: auto !important;
+  overflow: hidden;
+  background-color: #55a9db;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  .frame:before {
+    height: 50%;
+    width: 100%;
+    background: #8dcfed;
+    content: "";
+    position: absolute;
+    animation: water 3.5s ease-in-out infinite;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden; }
+  .frame h1 {
+    color: #8acdfd;
+    animation: floatBelow 3.5s linear infinite;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden; }
+    .frame h1:before {
+      content: attr(data-heading);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 50%;
+      color: #8dcfed;
+      overflow: hidden; }
+    .frame h1:after {
+      content: attr(data-heading);
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%, 0);
+      width: 100%;
+      height: 50%;
+      color: #eefaff;
+      overflow: hidden;
+      text-align: center;
+      font-size: 14vw;
+      animation: float 3.5s linear infinite;
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      letter-spacing: 1px; }
+
+@keyframes float {
+  0% {
+    height: 50%; }
+  50% {
+    height: calc(50% - 3px); }
+  100% {
+    height: 50%; } }
+
+@keyframes floatBelow {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotate(0); }
+  25% {
+    transform: translate(-50%, calc(-50% - 3px)) rotate(1deg); }
+  50% {
+    transform: translate(-50%, calc(-50% - 9px)); }
+  75% {
+    transform: translate(-50%, calc(-50% - 3px)) rotate(-1deg); } }
+
+@keyframes water {
+  0%,
+  100% {
+    height: 50%;
+    transform: rotate(0); }
+  25% {
+    transform: rotate(1deg); }
+  50% {
+    height: calc(50% - 10px); }
+  75% {
+    transform: rotate(-1deg); } }
 
 .header {
   text-align: center; }
