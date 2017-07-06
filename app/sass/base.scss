@@ -26,11 +26,15 @@ body {
 	min-height: 100%;
 	font: normal 1.6rem $font_1;
 	color: $gray;
-	background: radial-gradient(ellipse at center,#eaeff2 0,rgba(212,221,228,.5) 50%),linear-gradient(to bottom,#cae1f4 0,rgba(125,185,232,0) 100%);
+	background: $color_bg;
 	overflow-x: hidden;
 	-webkit-text-size-adjust: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+svg:not(:root) {
+	overflow: hidden;
 }
 
 dd,
@@ -42,13 +46,12 @@ dt {
 
 a {
 	text-decoration: none;
-	color: gray;
+	color: $blue;
 	transition: all 0.3s ease;
 
-	&:active,
 	&:focus,
 	&:hover {
-		color: darken(gray, 50%);
+		color: $red;
 	}
 }
 
@@ -59,8 +62,20 @@ a {
 	overflow: hidden;
 }
 
+.main {
+	padding-top: 8rem;
+	min-height: calc(100vh - 50px);
+}
+
 .container {
 	@include container;
+}
+
+.icon {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	fill: currentColor;
 }
 
 // back to top

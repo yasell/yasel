@@ -1,113 +1,84 @@
-// inputs and selects base
+// inputs common style
 %form_field {
 	display: block;
 	width: 100%;
 	height: 4rem;
-	padding: 1rem;
-	padding-left: 3rem;
+	padding: 1rem 4rem;
 	text-overflow: ellipsis;
-	font: normal 1.4rem $font_1;
-	color: $color_field;
-	box-shadow: 0 0 0 1px $color_shadow;
-	border: 1px solid $color_field_border;
+	font: normal 1.6rem $font_1;
+	color: $gray;
+	border: 1px solid $gray;
 	border-radius: 5px;
-	opacity: 1;
 	transition: all 0.5s ease;
 	-webkit-appearance: none;
-}
 
-// common form style
-input[type="email"],
-input[type="tel"],
-input[type="text"],
-textarea {
-	@extend %form_field;
-
-	&:required:valid {
-		outline: none;
-		border-color: green;
-	}
-}
-
-/* placeholder`s */
-input,
-textarea {
-	&::-webkit-input-placeholder,
+	// placeholders
+	&:-ms-input-placeholder,
 	&::-moz-placeholder,
-	&:-ms-input-placeholder {
+	&::-webkit-input-placeholder {
 		color: $gray_light;
 		opacity: 1;
 		transition: all 0.3s ease;
 	}
 
-	&:focus::-webkit-input-placeholder,
+	&:focus:-ms-input-placeholder,
 	&:focus::-moz-placeholder,
-	&:focus:-ms-input-placeholder {
+	&:focus::-webkit-input-placeholder {
 		color: transparent;
 		opacity: 0;
 	}
 
-	&:hover,
-	&:active,
-	&:focus {
+	&:focus,
+	&:hover {
 		outline: none;
-		border-color: $color_field_hover;
+		border-color: darken($gray, 50%);
 	}
+}
+
+// common form style
+input[type="email"],
+input[type="text"],
+textarea {
+	@extend %form_field;
 }
 
 textarea {
 	height: auto;
-  resize: none;
+	resize: none;
 }
 
 .form {
 	max-width: 100%;
 	margin: 0 auto;
-	padding: 1rem;
+	padding: 0 1rem;
 }
 
 .form__unit {
 	position: relative;
-	margin-bottom: 20px;
 
-	> label {
-		position: absolute;
-		top: 8px;
-		left: 10px;
-		font-size: 14px;
-		opacity: 0.3;
-	}
+	> input[type="text"],
+	> input[type="email"] {
 
-	 > input[type="email"],
-	 > input[type="tel"],
-	 > input[type="text"] {
-
-	 		&:focus {
+		&:focus {
 			outline: 0;
-			background-color: #fff;
-
-			& + label {
-				opacity: 0;
-			}
+			background-color: cornsilk;
 		}
 
-		&:valid {
+		&:required:valid {
+			position: relative;
 			background: #fff url("../img/icons/check.svg");
-			background-size: 15px;
+			background-size: 2rem;
 			background-repeat: no-repeat;
-			background-position: 3px 10px;
-
-			& + label {
-				opacity: 0;
+			background-position: 5px 10px;
+			outline: none;
+			border-color: green;
+			@media (max-width: $tablet) {
+				background-position: 5px 8px;
 			}
 		}
 
 		&:invalid:not(:focus):not(:placeholder-shown) {
-			background: pink;
-
-			& + label {
-				opacity: 0;
-			}
+			background-color: pink;
 		}
 
 		&:invalid:focus:not(:placeholder-shown) {
@@ -119,37 +90,57 @@ textarea {
 	}
 
 	> textarea {
-
 		&:focus {
 			outline: 0;
-			background-color: #fff;
+			background-color: cornsilk;
+		}
+	}
 
-			& + label {
-				opacity: 0;
+	// icons
+	> label {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 5px;
+		width: 20px;
+		height: 20px;
+		margin: auto;
+	}
+
+	&--mail {
+		label {
+			left: 8px;
+			top: 8px;
+			bottom: auto;
+			@media (max-width: $tablet) {
+				top: 4px;
 			}
 		}
+	}
 
-		&:not(:focus):not(:placeholder-shown) {
-
-			& + label {
-				opacity: 0;
-			}
+	&--text {
+		label {
+			top: 8px;
+			bottom: auto;
 		}
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 20px;
 	}
 }
 
 // error text
 .form__error {
-	display: block;
 	width: 100%;
 	max-height: 0;
 	padding: 0;
-	text-align: center;
-	font: normal 1.4rem $font_1;
+	text-align: left;
+	font: normal 1.6rem $font_1;
 	color: red;
 	background: transparent;
 	overflow: hidden;
-	transition: all 0.5s ease;
+	transition: all 0.3s;
 }
 
 // submit
@@ -158,4 +149,5 @@ textarea {
 	width: 100%;
 	max-width: 100%;
 	margin: 0 auto;
+	border-radius: 5px;
 }

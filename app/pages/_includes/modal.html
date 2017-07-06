@@ -1,33 +1,52 @@
 <div class="modal-bg"></div>
 
-<div id="modal_window" class="modal  modal--call" role="dialog">
+<div id="modal_window" class="modal" role="dialog">
 	<button class="modal__close">
 		Close
-		<svg class="icon  icon-cross">
-    	<use xlink:href="img/icons/sprite/sprite.svg#cross"></use>
+		<svg class="icon  icon-modal-close">
+    	<use xlink:href="img/icons/sprite/sprite.svg#modal-close"></use>
 		</svg>
 	</button>
 	<div class="modal__guts" role="document">
-		<h2 class="modal__title"> Заказать звонок </h2>
-		<form id="modal_form" class="form" method="post" action="/">
-			<div class="form__unit">
-				<input type="text" id="name" name="name" value="" required="" placeholder=" " minlength="3">
-				<label for="name">Имя*</label>
+		<h2 class="modal__title"> Contact me! </h2>
+
+		<form class="form" method="post" action="/">
+			<div class="form__unit  form__unit--name">
+				<label for="name">
+					<svg class="icon  icon-modal-name">
+  					<use xlink:href="img/icons/sprite/sprite.svg#modal-name"></use>
+					</svg>
+				</label>
+				<input type="text" id="name" name="name" value="" required="" placeholder="Name *" minlength="3">
 			</div>
-			<div class="form__unit">
-				<input type="tel" id="phone" name="phone" value="" required="" placeholder=" " pattern="^\(?[0-9]{3}\)?(\s+)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$">
-				<label for="phone">Телефон*</label>
+			<div class="form__unit  form__unit--mail">
+				<label for="mail">
+					<svg class="icon  icon-modal-mail">
+  					<use xlink:href="img/icons/sprite/sprite.svg#modal-mail"></use>
+					</svg>
+				</label>
+				<input type="email" id="mail" name="email" value="" required="" placeholder="Email *" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$">
 				<div class="form__error">
-					Введите пожалуйста полный номер телефона. В формате (xxx)-xxx-xx-xx
+					give me your real Email, please...
 				</div>
 			</div>
-			<div class="form__unit">
-				<textarea id="text" rows="4" cols="50" name="message" placeholder="Комментарий. Например, название нужной запчасти"></textarea>
+			<div class="form__unit  form__unit--text">
+				<label for="text">
+					<svg class="icon  icon-modal-text">
+  					<use xlink:href="img/icons/sprite/sprite.svg#modal-text"></use>
+					</svg>
+				</label>
+				<textarea id="text" rows="8" cols="50" name="message" placeholder="Your message"></textarea>
 			</div>
-			<div class="form__unit">
-				<input class="form__submit  button" type="submit" value="Уточнить наличие">
+			<div class="form__unit  form__unit--send">
+				<input class="form__submit  button" type="submit" value="Send Message">
 			</div>
 		</form>
+
+		<p>
+			If you prefer to contact me directly, please send your Email to:
+			<br> <a href="mailto:raman.yasel@yahoo.com">raman.yasel@yahoo.com</a>
+		</p>
 	</div>
 </div>
 
@@ -41,25 +60,5 @@
 	<div class="modal__guts" role="document">
 		<h2 class="modal__title"> Спасибо за заявку! </h2>
 		<p> Наш сотрудник свяжется с вами, как только уточнит наличие запчасти. <br> Обычно ответ приходит в течение 20 минут. </p>
-	</div>
-</div>
-
-<div id="preloader" class="preloader">
-	<div id="preloader_inner" class="preloader__inner  frame">
-		<div class="eye">
-			<div class="ball">
-				<div class="iris"></div>
-			</div>
-		</div>
-		<div class="lid-top">
-			<svg width="240px" height="106px" viewBox="0 0 240 106">
-			<path d="M239.461093,106 L240,106 L240,0 L0,0 L0,106 L0.538906982,106 C5.9904782,95.5378089 52.3717687,81 120,81 C187.628231,81 234.009522,95.5378089 239.461093,106 Z" class="lid"></path>
-		</svg>
-		</div>
-		<div class="lid-bottom">
-			<svg width="240px" height="106px" viewBox="0 0 240 106">
-			<path d="M239.461093,106 L240,106 L240,0 L0,0 L0,106 L0.538906982,106 C5.9904782,95.5378089 52.3717687,81 120,81 C187.628231,81 234.009522,95.5378089 239.461093,106 Z" class="lid"></path>
-		</svg>
-		</div>
 	</div>
 </div>

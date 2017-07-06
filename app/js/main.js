@@ -1,16 +1,14 @@
 $(document).ready(function($) {
-	// - developer funcitons
-	pageWidget(['index', 'news', 'contact']);
-	getAllClasses('html', '.elements_list');
 
-	// $("#preloader_inner").fadeOut();
-  $("#preloader").delay(3000).fadeOut("slow");
+	$("#preloader_inner").fadeOut();
+	// $("#preloader").delay(3000).fadeOut("slow");
 
 	// - mobile menu
 	$body = $("body");
 	$menuTrigger = $("#menu__trigger");
+	$menuLink = $(".header__menu-list a");
 
-	$menuTrigger.on("click", function () {
+	$menuTrigger.on("click", function() {
 		if ($body.hasClass("menu__open")) {
 			$body.removeClass("menu__open");
 			$(this).removeClass("active__mod");
@@ -20,14 +18,23 @@ $(document).ready(function($) {
 		}
 	});
 
+	$menuLink.on("click", function() {
+		if ($body.hasClass("menu__open")) {
+			$body.removeClass("menu__open");
+			$menuTrigger.removeClass("active__mod");
+		}
+	});
+
 	// - back to top
 	$(".back-top").hide();
 
 	$(window).scroll(function() {
-		if ($(this).scrollTop() > 700) {
+		if ($(this).scrollTop() > 50) {
 			$(".back-top").fadeIn();
+			$(".header").addClass("header--color");
 		} else {
 			$(".back-top").fadeOut();
+			$(".header").removeClass("header--color");
 		}
 	});
 
@@ -38,62 +45,41 @@ $(document).ready(function($) {
 		return false;
 	});
 
-	// - smooth scroll
-	$(".header__menu-list").on("click", "a", function(event) {
-		event.preventDefault();
-
-		var el = $(this).attr("href");
-		$("body,html").animate({
-			scrollTop: $(el).offset().top
-		}, 2000);
-		return false;
-	});
-
-	// - call button
-	$("#call").click(function() {
+	// modal window
+	// open
+	$("#modal").click(function() {
 		$("#modal_window").addClass("modal--show");
+		$(".page-wrapper").addClass("modal-blur");
 		$(".modal-bg").css("display", "block");
 	});
 
+	// close
 	$(".modal__close, .modal-bg").click(function() {
 		$("#modal_window").removeClass("modal--show");
+		$(".page-wrapper").removeClass("modal-blur");
 		$(".modal-bg").css("display", "none");
 	});
 
-	// easy form validate
-	function validateForm(dir) {
-		var form = dir;
-		var name, phone;
-		var error = [];
-		// var checking;
-		form.find("#modal_form").html("");
-		name = form.find("#name").val();
-		phone = form.find("#phone").val();
-		if (name === "") {
-			error.push("Введите имя*");
-		} else
-		if (!/[А-Яа-яЁёa-zA-Z`\s]{1,100}/.test(name)) {
-			error.push("*Мы ждём от Вас корректного имени");
-		}
-		if (phone === "") {
-			error.push("Введите телефон*");
-		} else
-		if (!/[0-9()-\s+]{3,20}/.test(phone)) {
-			error.push("*Введите корректный телефон");
-		}
-		if (error.length > 0) {
-			$.each(error, function() {
-				form.find(".errortext").append(this + "<br>");
-			});
-			return false;
-		}
-		return true;
-	}
+	// send modal
+	$("#modal_window .form").submit(function() {
+		$.ajax({
+			type: "POST",
+			url: "mail.php",
+			data: $(this).serialize()
+		}).done(function() {
+			$(this).find("input").val("");
+			// open modal
+			$("#modal_call, #modal_call2").removeClass("modal_show");
+			$("#modal_sucsess").addClass("modal_show");
+			$(".modal_bg").css("display", "block");
 
-	$(".order-btn").on("submit", function(e) {
-		var valid = validateForm($(this));
-		if (!valid) {
-			return false;
-		}
+			$(".modal__close, .modal_bg").click(function() {
+				$("#modal_sucsess").removeClass("modal_show");
+				$(".modal_bg").css("display", "none");
+			});
+			$(".form").trigger("reset");
+		});
+		return false;
 	});
+
 });
