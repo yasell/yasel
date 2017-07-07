@@ -12,34 +12,33 @@
 	transition: all 0.5s ease;
 	-webkit-appearance: none;
 
-	// placeholders
-	&:-ms-input-placeholder,
-	&::-moz-placeholder,
-	&::-webkit-input-placeholder {
-		color: $gray_light;
-		opacity: 1;
-		transition: all 0.3s ease;
-	}
-
-	&:focus:-ms-input-placeholder,
-	&:focus::-moz-placeholder,
-	&:focus::-webkit-input-placeholder {
-		color: transparent;
-		opacity: 0;
-	}
-
 	&:focus,
 	&:hover {
-		outline: none;
 		border-color: darken($gray, 50%);
 	}
 }
 
 // common form style
-input[type="email"],
-input[type="text"],
+input,
 textarea {
 	@extend %form_field;
+
+	// placeholders
+	&:-ms-input-placeholder,
+	&:-moz-placeholder,
+	&::-moz-placeholder,
+	&::-webkit-input-placeholder {
+		opacity: 1;
+		transition: filter .2s ease, opacity .2s .2s ease;
+	}
+
+	&:focus:-ms-input-placeholder,
+	&:focus:-moz-placeholder,
+	&:focus::-moz-placeholder,
+	&:focus::-webkit-input-placeholder {
+		opacity: none;
+		filter: blur(3px);
+	}
 }
 
 textarea {
@@ -147,7 +146,7 @@ textarea {
 .form__submit {
 	display: block;
 	width: 100%;
-	max-width: 100%;
+	max-width: 55%;
 	margin: 0 auto;
 	border-radius: 5px;
 }

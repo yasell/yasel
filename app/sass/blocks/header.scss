@@ -35,6 +35,7 @@
 	transition: background-color 0.33s cubic-bezier(0.4, 0, 1, 1);
 }
 
+// logo
 .header__logo {
 	z-index: 100;
 	position: relative;
@@ -70,6 +71,11 @@
 	@media (max-width: $tablet) {
 		padding: 5rem 0 0;
 	}
+}
+
+.header__menu-link {
+	position: relative;
+	font-weight: 600;
 }
 
 /* main menu */
