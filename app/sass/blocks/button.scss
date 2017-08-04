@@ -2,6 +2,7 @@
 	position: relative;
 	display: inline-block;
 	max-width: 30rem;
+	height: auto;
 	margin: 1rem;
 	padding: 1rem 2rem;
 	border: 0;
@@ -15,14 +16,35 @@
 	white-space: nowrap;
 	text-decoration: none;
 	box-shadow: none;
-	transition: all 0.5s ease;
 	user-select: none;
 	touch-action: manipulation;
 	-webkit-appearance: button;
+	overflow: hidden;
+	transition: all 0.5s ease;
+	transform: perspective(1px) translateZ(0);
+
+	&:before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		left: 100%;
+		right: 0;
+		bottom: 0;
+		background: $red;
+		height: 4px;
+		transition-property: left;
+		transition-duration: 0.3s;
+		transition-timing-function: ease-out;
+	}
 
 	&:hover,
+	&:focus,
 	&:active {
 		text-decoration: none;
 		outline: 0;
+
+		&:before {
+			left: 0;
+		}
 	}
 }

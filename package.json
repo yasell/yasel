@@ -1,5 +1,5 @@
 {
-  "name": "gulp_template",
+  "name": "yasel.by",
   "version": "1.0.0",
   "private": true,
   "description": "gulp template for web_project",
@@ -41,9 +41,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yasell/start-template.git"
+    "url": "git+https://github.com/yasell/yasel.git"
   },
   "bugs": {
-    "url": "https://github.com/yasell/start-template/issues"
+    "url": "https://github.com/yasell/yasel/issues"
   }
 }

@@ -17,16 +17,17 @@
 	overflow: hidden;
 	transition: all .3s;
 	transform: translateY(-5%);
-	opacity: 0;
+	display: none;
 
 	// states
 	&--show {
 		z-index: 1000;
-		opacity: 1;
+		display: block;
 		transform: translateY(0);
 	}
+
 	&--sucsess {
-		height: 20rem;
+		height: 15rem;
 	}
 
 	// background
@@ -41,6 +42,7 @@
 		background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%, rgba(20,20,20,0.5) 100%);
 		transition: all .3s;
 	}
+
 	// blur
 	&-blur {
 		filter: blur(3px);

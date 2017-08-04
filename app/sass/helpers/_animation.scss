@@ -23,3 +23,14 @@
     transform: rotate(90deg);
   }
 }
+
+// background animation
+@keyframes gradient {
+    0%,to {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 60% 60%;
+    }
+}

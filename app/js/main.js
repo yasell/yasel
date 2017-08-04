@@ -1,7 +1,6 @@
 $(document).ready(function($) {
 
-	$("#preloader_inner").fadeOut();
-	// $("#preloader").delay(3000).fadeOut("slow");
+	$("#preloader").delay(3000).fadeOut("slow");
 
 	// - mobile menu
 	$body = $("body");
@@ -61,20 +60,20 @@ $(document).ready(function($) {
 	});
 
 	// send modal
-	$("#modal_window .form").submit(function() {
+	$(".form").submit(function() {
 		$.ajax({
 			type: "POST",
 			url: "mail.php",
 			data: $(this).serialize()
 		}).done(function() {
 			$(this).find("input").val("");
-			// open modal
-			$("#modal_call, #modal_call2").removeClass("modal_show");
-			$("#modal_sucsess").addClass("modal_show");
-			$(".modal_bg").css("display", "block");
-
+			// open sucsess modal
+			$("#modal_window").removeClass("modal--show");
+			$("#modal_sucsess").addClass("modal--show");
+			// clode sucsess modal
 			$(".modal__close, .modal_bg").click(function() {
-				$("#modal_sucsess").removeClass("modal_show");
+				$("#modal_sucsess").removeClass("modal--show");
+				$(".page-wrapper").removeClass("modal-blur");
 				$(".modal_bg").css("display", "none");
 			});
 			$(".form").trigger("reset");

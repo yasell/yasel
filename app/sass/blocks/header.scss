@@ -9,7 +9,7 @@
 
 	&--color {
 		.header__main-row {
-			background-color: cadetblue;
+			background-color: lighten($color_bg, 10%);
 		}
 		.header__menu-link {
 			color: #fff;

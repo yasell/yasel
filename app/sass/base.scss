@@ -27,10 +27,13 @@ body {
 	font: normal 1.6rem $font_1;
 	color: $gray;
 	background: $color_bg;
+	background-image: linear-gradient(-225deg, #fffeff 0%, #a5cecd 100%);
 	overflow-x: hidden;
 	-webkit-text-size-adjust: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
 }
 
 svg:not(:root) {
