@@ -1,0 +1,69 @@
+<div class="modal-bg"></div>
+
+<div id="modal_window" class="modal" role="dialog">
+
+	<button class="modal__close">
+		Close
+		<svg class="icon  icon-modal-close">
+			<use xlink:href="img/icons/sprite/sprite.svg#modal-close"></use>
+		</svg>
+	</button>
+
+	<div class="modal__guts" role="document">
+		<h2 class="modal__title"> Contact me! </h2>
+
+		<form class="form" method="post" action="/">
+			<div class="form__unit  form__unit--name">
+				<label for="name">
+					<svg class="icon  icon-modal-name">
+						<use xlink:href="img/icons/sprite/sprite.svg#modal-name"></use>
+					</svg>
+				</label>
+				<input type="text" id="name" name="name" value="" required="" placeholder="Name *" minlength="3">
+			</div>
+			<div class="form__unit  form__unit--mail">
+				<label for="mail">
+					<svg class="icon  icon-modal-mail">
+						<use xlink:href="img/icons/sprite/sprite.svg#modal-mail"></use>
+					</svg>
+				</label>
+				<input type="email" id="mail" name="email" value="" required="" placeholder="Email *" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$">
+				<div class="form__error">
+					send me your real Email, please…
+				</div>
+			</div>
+			<div class="form__unit  form__unit--text">
+				<label for="text">
+					<svg class="icon  icon-modal-text">
+						<use xlink:href="img/icons/sprite/sprite.svg#modal-text"></use>
+					</svg>
+				</label>
+				<textarea id="text" rows="8" cols="50" name="mess" placeholder="Your message"></textarea>
+			</div>
+			<div class="form__unit  form__unit--send">
+				<button class="form__submit  button" type="submit" value="Send Message"> Send Message </button>
+			</div>
+		</form>
+
+		<p>
+			If you prefer to contact me directly, please send your Email to:
+			<br> <a href="mailto:raman.yasel@yahoo.com">raman.yasel@yahoo.com</a>
+		</p>
+
+	</div>
+</div>
+
+<div id="modal_sucsess" class="modal  modal--sucsess" role="dialog">
+
+	<button class="modal__close">
+		Close
+		<svg class="icon  icon-modal-close">
+			<use xlink:href="img/icons/sprite/sprite.svg#modal-close"></use>
+		</svg>
+	</button>
+
+	<div class="modal__guts" role="document">
+		<h2 class="modal__title"> Thank you! </h2>
+		<p> I`ll definitely get in touch. </p>
+	</div>
+</div>

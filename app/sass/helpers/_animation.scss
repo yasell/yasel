@@ -1,0 +1,36 @@
+// text animation
+@keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+// close button animation
+@keyframes rotate-90-cw {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+// background animation
+@keyframes gradient {
+    0%,to {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 60% 60%;
+    }
+}
