@@ -25,12 +25,14 @@
 }
 
 // background animation
-@keyframes gradient {
-    0%,to {
-        background-position: 0% 0%;
-    }
-
-    50% {
-        background-position: 60% 60%;
-    }
+@keyframes gradient-bg {
+  0% {
+    background-position:50% 0%
+  }
+  50% {
+    background-position:51% 100%
+  }
+  100% {
+    background-position:50% 0%
+  }
 }

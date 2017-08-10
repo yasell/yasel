@@ -62,16 +62,16 @@ body {
   font: normal 1.6rem -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Arial, sans-serif;
   color: #878787;
   background: #8e9eab;
-  background-image: -webkit-linear-gradient(315deg, #fffeff 0%, #a5cecd 100%);
-  background-image: -o-linear-gradient(315deg, #fffeff 0%, #a5cecd 100%);
-  background-image: linear-gradient(-225deg, #fffeff 0%, #a5cecd 100%);
+  background-image: -webkit-linear-gradient(92deg, #f5f7fa, #c3cfe2, #e2d1c3);
+  background-image: -o-linear-gradient(92deg, #f5f7fa, #c3cfe2, #e2d1c3);
+  background-image: linear-gradient(358deg, #f5f7fa, #c3cfe2, #e2d1c3);
   overflow-x: hidden;
   -webkit-text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-size: 400% 400%;
-  -webkit-animation: gradient 10s ease infinite;
-          animation: gradient 10s ease infinite; }
+  background-size: 600% 600%;
+  -webkit-animation: gradient-bg 12s ease infinite;
+          animation: gradient-bg 12s ease infinite; }
 
 svg:not(:root) {
   overflow: hidden; }
@@ -459,7 +459,8 @@ a {
 
 .hero__name {
   margin-bottom: 1rem;
-  font-size: 3.6rem; }
+  font-size: 3.6rem;
+  color: cadetblue; }
 
 .hero__about {
   margin-bottom: 1rem; }
@@ -882,17 +883,21 @@ textarea {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg); } }
 
-@-webkit-keyframes gradient {
-  0%, to {
-    background-position: 0% 0%; }
+@-webkit-keyframes gradient-bg {
+  0% {
+    background-position: 50% 0%; }
   50% {
-    background-position: 60% 60%; } }
+    background-position: 51% 100%; }
+  100% {
+    background-position: 50% 0%; } }
 
-@keyframes gradient {
-  0%, to {
-    background-position: 0% 0%; }
+@keyframes gradient-bg {
+  0% {
+    background-position: 50% 0%; }
   50% {
-    background-position: 60% 60%; } }
+    background-position: 51% 100%; }
+  100% {
+    background-position: 50% 0%; } }
 
 @media (min-width: 640px) {
     html {
