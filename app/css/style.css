@@ -477,7 +477,7 @@ a {
   display: block;
   position: relative;
   width: 300px;
-  height: 415px;
+  height: 300px;
   color: #fff;
   -webkit-perspective: 1000px;
           perspective: 1000px; }
@@ -492,7 +492,9 @@ a {
   margin: 0;
   width: 100%;
   height: 100%;
-  display: block; }
+  display: block;
+  border-radius: 50%;
+  overflow: hidden; }
 
 .tilter__figure > * {
   -webkit-transform: translateZ(0px);
@@ -543,7 +545,8 @@ a {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 5rem 1rem; }
+  padding: 5rem 1rem;
+  text-align: center; }
 
 .tilter__title {
   margin: 0;
